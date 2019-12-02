@@ -1,0 +1,56 @@
+/* grid 布局 */
+/* https://css-tricks.com/snippets/css/complete-guide-grid/ */
+.container {
+  display: grid;
+  /* justify-content: space-between; */
+
+  /* grid-gap属性是grid-column-gap和grid-row-gap属性的缩写。语法如下： */
+  /* grid-gap: 10px; */
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  /* grid-template-columns:<track-size> ... | <line-name> <track-size> ... ; */
+  /* grid-template-rows: <track-size> ... | <line-name> <track-size> ...; */
+
+  /* grid-template-columns: repeat(auto-fill, 100px); */
+  /* grid-template-columns: repeat(3, 20px [col-start]);==> grid-template-columns: 20px [col-start] 20px [col-start] 20px [col-start]; */
+
+  grid-template-areas:
+    "葡萄 葡萄 葡萄"
+    "龙虾 养鱼 养鱼"
+    "龙虾 养鱼 养鱼"
+    "西瓜 西瓜 西瓜";
+  /* grid-template-areas: 
+    "<grid-area-name> | . | none | ..."
+    "..."; */
+
+  /* grid-template */
+  /* grid-template: none | <grid-template-rows> / <grid-template-columns>; */
+  /* grid-template:
+    [row1-start] "header header header" 25px [row1-end]
+    [row2-start] "footer footer footer" 25px [row2-end]
+    / auto 50px auto; */
+
+  /* grid-column-gap: <line-size>;
+    grid-row-gap: <line-size>; */
+}
+.putao {
+  grid-area: 葡萄;
+  height: 30px;
+  background-color: palegreen;
+}
+.longxia {
+  grid-area: 龙虾;
+  height: 30px;
+  background-color: palevioletred;
+}
+.yangyu {
+  grid-area: 养鱼;
+  height: 100px;
+  background-color: peru;
+}
+.xigua {
+  grid-area: 西瓜;
+  height: 30px;
+  background-color: royalblue;
+}
