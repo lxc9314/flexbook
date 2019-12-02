@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  /* flex-flow (Applies to: parent flex container element) */
+  /* flex-flow: <‘flex-direction’> || <‘flex-wrap’> */
+  flex-flow: row wrap;
+  /* 
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe */
+
+  /* align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe; */
+
+  /* align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe; */
+
+  /* order 给元素排序 */
+  /* By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container. */
+
+  /* flex-grow 将剩余空间分配给元素*/
+  /* This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.
+
+  If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children. If one of the children has a value of 2, the remaining space would take up twice as much space as the others (or it will try to, at least). */
+
+  /* flex-shrink 让元素能在适当的时候能够被压缩*/
+  /* This defines the ability for a flex item to shrink if necessary. */
+
+  /* flex-basis */
+  /* This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means "look at my width or height property" (which was temporarily done by the main-size keyword until deprecated). The content keyword means "size it based on the item's content" - this keyword isn't well supported yet, so it's hard to test and harder to know what its brethren max-content, min-content, and fit-content do. */
+  /* If set to 0, the extra space around content isn't factored in. If set to auto, the extra space is distributed based on its flex-grow value. See this graphic. */
+  /* flex-basis: <length> | auto; */
+
+  /* flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+}
+.item {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 100px;
+}
+.item2 {
+  order: 0;
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+.item1 {
+  order: 2;
+}
+.item3 {
+  order: 1;
+}
+.item4 {
+  order: 3;
+}
